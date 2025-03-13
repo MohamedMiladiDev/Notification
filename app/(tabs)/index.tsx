@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Text, View, Button, Platform } from "react-native";
+import { Text, View, Button, Platform, TextInput } from "react-native";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import Constants from "expo-constants";
@@ -61,7 +61,14 @@ export default function App() {
         justifyContent: "space-around",
       }}
     >
-      <Text>Your expo push token: {expoPushToken}</Text>
+      <View style={{ gap: 10 }}>
+        <Text>Your expo push token: {expoPushToken}</Text>
+        <TextInput
+          style={{ height: 40, borderColor: "gray", borderWidth: 1 }}
+          onChangeText={setExpoPushToken}
+          value={expoPushToken}
+        />
+      </View>
       <Text>{`Channels: ${JSON.stringify(
         channels.map((c) => c.id),
         null,
