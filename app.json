@@ -9,13 +9,15 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.miladisolutions.notification"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.miladisolutions.notification"
     },
     "web": {
       "bundler": "metro",
@@ -45,6 +47,12 @@
         "projectId": "0c9e0378-fadd-421b-aedd-d715f6882b9e"
       }
     },
-    "owner": "miladi-solutions"
+    "owner": "miladi-solutions",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0c9e0378-fadd-421b-aedd-d715f6882b9e"
+    }
   }
 }
